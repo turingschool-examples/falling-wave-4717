@@ -1,6 +1,6 @@
 # Make It Work
 
-This repository requires and has been tested on Ruby v3.2.2 and is based on Rails 7.0.6.
+This repository requires and has been tested on Ruby v3.2.2 and is based on Rails 7.1.3.
 
 RSpec and Shoulda-Matchers have been installed and set up.
 
@@ -123,4 +123,3 @@ And I see that the number of contestants has increased by 1
 And when I visit the contestants index page
 I see that project listed under that contestant's name
 ```
-
