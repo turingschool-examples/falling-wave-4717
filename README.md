@@ -43,7 +43,7 @@ RSpec and Shoulda-Matchers have been installed and set up.
 * This challenge uses a one-to-many and a many-to-many relationship (your migrations are already built), be sure to check your setup/schema carefully.
 * You also are starting with seeds, so if you need any objects for your tests, feel free to grab the ones from the seeds file.
 * All model tests for validations and relationships have been made.
-* You will have **6** failing model tests as soon as you set up this challenge and run your tests (Let your instructor know if you are not seeing 6 failing tests).
+* When you run `bundle exec rspec`, you should have 6 failing model tests to start. (Let your instructors know if you are not seeing 6 failing tests).
 * Get these tests to pass before moving on to the user stories below.
 
 ### Challenge Description
