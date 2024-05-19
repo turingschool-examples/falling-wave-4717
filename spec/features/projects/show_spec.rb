@@ -38,6 +38,12 @@ RSpec.describe "Project Show Page" do
 
         expect(page).to have_content("Average Contestant Experience: 12.5")
       end
+
+      it "shows a form to add a contestant to project" do
+        visit("/projects/#{@news_chic.id}")
+
+        expect(page).to have_field("form")
+      end
     end
   end
 end

@@ -4,3 +4,8 @@
 <p> Number of Contestants: <%= @contestant_count %></p>
 <p> Average Contestant Experience: <%= @average_years_exp %></p>
 
+<%= form_with url: "/projects/#{@project.id}", method: :patch, data: {turbo: false} do |form| %>
+  <%= form.text_field :id, "Enter Contestant ID: "%>
+  <%= form.submit "Add Contestant to Project" %>
+<% end %>
+
