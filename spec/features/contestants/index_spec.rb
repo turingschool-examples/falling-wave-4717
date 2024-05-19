@@ -32,7 +32,6 @@ RSpec.describe "Contestants Index Page" do
 
         expect(page).to have_content(@news_chic.name)
         expect(page).to have_content(@upholstery_tux.name) #still inside pluck array
-        save_and_open_pageo
       end
     end
   end
