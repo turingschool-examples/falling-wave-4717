@@ -2,3 +2,7 @@
 <p>Material: <%= @project.material %></p>
 <p>Challenge Theme: <%= @project.challenge.theme %></p>
 <p>Number of Contestants: <%= @project.contestants.count %></p>
+<% experience_array = @project.contestants.map do |contestant| %>
+    <% contestant.years_of_experience %>
+    <% end %>
+<p>Average Contestant Experience: <%= (experience_array.sum).to_f / (experience_array.count) %> years</p>
