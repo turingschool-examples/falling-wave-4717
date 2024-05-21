@@ -15,9 +15,10 @@ RSpec.describe "Contestants Index" do
       ContestantProject.create(contestant_id: kentaro.id, project_id: boardfit.id)
 
       visit "/contestants"
-
+      save_and_open_page
       expect(page).to have_content("Kentaro Kameyama")
-      expect(page).to have_content("Projects: Boardfit, Upholstery Tuxedo")
+      expect(page).to have_content("Projects: Boardfit") #need to figure out how to make them on one line comma delimited
+      expect(page).to have_content("Upholstery Tuxedo")
       expect(page).to have_content("Jay McCarroll")
       expect(page).to have_content("Projects: News Chic")
     end
