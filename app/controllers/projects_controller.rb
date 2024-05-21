@@ -3,4 +3,9 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 		# require 'pry'; binding.pry
   end
+
+  def contestants
+    @project = Project.find(params[project_id])
+    # require 'pry'; binding.pry
+  end
 end
