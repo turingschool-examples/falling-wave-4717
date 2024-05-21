@@ -13,6 +13,7 @@ RSpec.describe 'projects show ', type: :feature do
       expect(page).to have_content(project.name)
       expect(page).to have_content(project.material)
       expect(page).to have_content(project.challenge.theme)
+      expect(page).to have_content(project.contestants.count)
     end
   end
 end
