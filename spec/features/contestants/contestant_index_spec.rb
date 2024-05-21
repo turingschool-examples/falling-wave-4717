@@ -17,11 +17,11 @@ RSpec.describe Contestant do
 		@erin = Contestant.create(name: "Erin Robertson", age: 44, hometown: "Denver", years_of_experience: 15)
 		
 		@jay_project_1 = ContestantProject.create!(contestant_id: @jay.id, project_id: @news_chic.id)
-		@gretchen_project_1 = ContestantProject.create(contestant_id: @gretchen.id, project_id: @news_chic.id)
-		@gretchen_project_2 = ContestantProject.create(contestant_id: @gretchen.id, project_id: @upholstery_tux.id)
-		@kentaro_project_1 = ContestantProject.create(contestant_id: @kentaro.id, project_id: @upholstery_tux.id)
-		@kentaro_project_2 = ContestantProject.create(contestant_id: @kentaro.id, project_id: @boardfit.id)
-		@erin_project_1 = ContestantProject.create(contestant_id: @erin.id, project_id: @boardfit.id)
+		@gretchen_project_1 = ContestantProject.create!(contestant_id: @gretchen.id, project_id: @news_chic.id)
+		@gretchen_project_2 = ContestantProject.create!(contestant_id: @gretchen.id, project_id: @upholstery_tux.id)
+		@kentaro_project_1 = ContestantProject.create!(contestant_id: @kentaro.id, project_id: @upholstery_tux.id)
+		@kentaro_project_2 = ContestantProject.create!(contestant_id: @kentaro.id, project_id: @boardfit.id)
+		@erin_project_1 = ContestantProject.create!(contestant_id: @erin.id, project_id: @boardfit.id)
 	end
 
 # User Story 2
@@ -37,19 +37,20 @@ RSpec.describe Contestant do
 #         Projects: LeatherFeather)
 	it 'shows a list of contestant names and the projects they worked on' do
 		visit "/contestants"
-		save_and_open_page
-		# require 'pry'; binding.pry
+		# save_and_open_page
 
-		# expect(page).to have_content(@jay.name)
-		# expect(page).to have_content(@jay.projects)
+		expect(page).to have_content(@jay.name)
+		expect(page).to have_content(@news_chic.name)
 
-		# expect(page).to have_content(@gretchen.name)
-		# expect(page).to have_content(@gretchen.projects)
+		expect(page).to have_content(@gretchen.name)
+		expect(page).to have_content(@news_chic.name)
+		expect(page).to have_content(@upholstery_tux.name)
 
-		# expect(page).to have_content(@kentaro.name)
-		# expect(page).to have_content(@kentaro.projects)
+		expect(page).to have_content(@kentaro.name)
+		expect(page).to have_content(@upholstery_tux.name)
+		expect(page).to have_content(@boardfit.name)
 
-		# expect(page).to have_content(@erin.name)
-		# expect(page).to have_content(@erin.projects)
+		expect(page).to have_content(@erin.name)
+		expect(page).to have_content(@boardfit.name)
 	end
 end
