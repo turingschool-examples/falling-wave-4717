@@ -1,8 +1,7 @@
 class ProjectsController < ApplicationController
   def show
-    # pry
     @project = Project.find(params[:project_id])
-    # pry
     @theme = @project.challenge.theme
+    @count = @project.contestants.count
   end
 end

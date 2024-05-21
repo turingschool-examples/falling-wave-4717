@@ -29,7 +29,7 @@ RSpec.describe "Contestant Index", type: :feature do
       end
 
       it "see list of all contestant names and their project names" do
-# save_and_open_page
+
         within "#contestant_#{@jay.id}" do
           expect(page).to have_content("Name: #{@jay.name}")
           expect(page).to have_content("#{@news_chic.name}")
