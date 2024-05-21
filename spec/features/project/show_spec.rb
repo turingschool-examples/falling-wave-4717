@@ -7,10 +7,10 @@ RSpec.describe "Project Show", type: :feature do
       news_chic = recycled_material_challenge.projects.create!(name: "News Chic", material: "Newspaper")
 
       visit "/projects/#{news_chic.id}"
-
-      expect(page).to have_content("Theme: Recycled Material")
-      expect(page).to have_content("Name: News Chic")
+      save_and_open_page
+      expect(page).to have_content("Project Name: News Chic")
       expect(page).to have_content("Material: Newspaper")
+      expect(page).to have_content("Challenge Theme: Recycled Material")
     end
 
   end
