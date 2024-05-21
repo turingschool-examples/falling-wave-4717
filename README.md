@@ -83,15 +83,15 @@ And under each contestants name I see a list of the projects (names) that they'v
 ```
 
 ```
-User Story 3 of 3
-As a visitor,
-When I visit a project's show page
-I see a count of the number of contestants on this project
+  User Story 3 of 3
+  As a visitor,
+  When I visit a project's show page
+  I see a count of the number of contestants on this project
 
-(e.g.    Litfit
-    Material: Lamp Shade
-  Challenge Theme: Apartment Furnishings
-  Number of Contestants: 3 )
+  (e.g.    Litfit
+      Material: Lamp Shade
+    Challenge Theme: Apartment Furnishings
+    Number of Contestants: 3 )
 ```
 
 ---
