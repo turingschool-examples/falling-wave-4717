@@ -47,7 +47,8 @@ RSpec.describe "A Projects Show Page" do
             end
 
             describe "I see a count of the number of contestants on this project" do
-                it "will count of the number of contestants on this project"
+                it "will count of the number of contestants on this project" do
+                    
                     visit "/projects/#{@news_chic.id}"
 
                     expect(page).to have_content("#{@news_chic.contestants.count}")
