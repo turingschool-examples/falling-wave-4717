@@ -1,0 +1,10 @@
+<h1>All Contestants</h1>
+
+<% @contestants.each do |contestant| %>
+      <h3><%= contestant.name %></h3>
+      <% project_names = [] %>
+      <% contestant.projects.each do |project| %>
+        <% project_names << project.name %>
+        <%end%>
+        <p>Projects: <%= "#{project_names.join(", ")}" %>
+<% end %>
