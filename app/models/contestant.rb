@@ -5,4 +5,8 @@ class Contestant < ApplicationRecord
     def project_names
         projects.map(&:name).join(", ")
     end
+
+    def self.average_years_of_experience
+        average(:years_of_experience)
+    end
 end
