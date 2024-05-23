@@ -32,6 +32,15 @@ RSpec.describe "project show page", type: :feature do
         expect(page).to have_content("Project Material: #{@news_chic.material}")
         expect(page).to have_content("Challenge Theme: #{@recycled_material_challenge.theme}")
       end
+
+      # As a visitor,
+      # When I visit a project's show page
+      # I see a count of the number of contestants on this project
+      it "I see a count of the number of contestants on this project" do
+        visit("/projects/#{@news_chic.id}")
+
+        expect(page).to have_content("Contestant Count: 2")
+      end
     end
   end
 end
