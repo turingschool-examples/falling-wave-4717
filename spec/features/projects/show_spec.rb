@@ -28,10 +28,9 @@ RSpec.describe "project show page", type: :feature do
       it "I see that project's name and material, and I also see the theme of the challenge that this project belongs to" do
         visit "/projects/#{@news_chic.id}"
 
-        require 'pry'; binding.pry
-        expect(page).to have_content("Project Name: #{news_chic.name}")
-        expect(page).to have_content("Project Material: #{news_chic.material}")
-        expect(page).to have_content("Challenge Theme: #{recycled_material_challenge.theme}")
+        expect(page).to have_content("Project Name: #{@news_chic.name}")
+        expect(page).to have_content("Project Material: #{@news_chic.material}")
+        expect(page).to have_content("Challenge Theme: #{@recycled_material_challenge.theme}")
       end
     end
   end
